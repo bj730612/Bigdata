@@ -16,7 +16,7 @@ def my_sum3(): #입력 X, 출력 O
     num1 = input("첫번째 수를 입력하세요: ")
     num2 = input("두번째 수를 입력하세요: ")
     result = num1 + num2 
-    return = result
+    return result
 
 def my_sum4(): #입력 X, 출력 X
     #함수안에서 모든 것을 처리
