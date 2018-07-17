@@ -20,7 +20,7 @@ for workbook in all_workbooks:
         total_sales = pd.DataFrame([float(str(value).strip('$').replace(',', ''))
                                     for value in data.ix[:, 'Sale Amount']]).sum()
         number_of_sales = len(data.loc[:, 'Sale Amount'])
-        average_sales = pd.DataFrame(total_sales / number_of_sales)
+        average_sales = pd.DataFrame(total_sales / number_of_sales).mean()
 
         workbook_total_sales.append(total_sales)
         workbook_number_of_sales.append(number_of_sales)
@@ -36,7 +36,7 @@ for workbook in all_workbooks:
 
         workbook_total = pd.DataFrame(workbook_total_sales).sum()
         workbook_total_number_of_sales = pd.DataFrame(workbook_number_of_sales).sum()
-        workbook_average = pd.DataFrame(workbook_total / workbook_total_number_of_sales)
+        workbook_average = pd.DataFrame(workbook_total / workbook_total_number_of_sales).mean()
 
         workbook_stats = {'workbook': os.path.basename(workbook),
                           'workbook_total': workbook_total,

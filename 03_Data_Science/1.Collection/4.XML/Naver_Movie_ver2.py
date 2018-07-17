@@ -13,6 +13,7 @@ movie_list = []
 html = urllib.request.urlopen('https://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=cnt&tg=0&date=20180709')
 soup = BeautifulSoup(html, 'html.parser')
 
+
 def create_dir():
     dir_name = "naver_ranking" + str(int(int(count) / 3 + 1))
     if os.path.isdir("V2_BigData/naver_ranking" + str(int(int(count) / 3 + 1))) is False:

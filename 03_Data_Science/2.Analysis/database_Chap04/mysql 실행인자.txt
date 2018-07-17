@@ -1,0 +1,6 @@
+2db_insert_rows.py : supplier_data.csv
+3db_uadate_rows.py : data_for_updating.csv
+4th => 첫번째 실행인자: supplier_data.csv
+5th => 첫번째 실행인자: output_files/5output.csv
+6th => 첫번째 실행인자: data_for_updating_mysql.csv
+7th => supplier_data.csv
