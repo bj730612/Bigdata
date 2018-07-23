@@ -1,0 +1,5 @@
+item_numbers_to_find.csv historical_files output_files/1output.csv
+<입력데이터 특징> Customer별 Package별 상품구매내역이 Sorting되어있음
+<출력데이터> Customer별 Package별 제품 사용 총 누적시간
+customer_category_history.csv output_files/2output.csv
+mysql_server_error_log.txt output_files/3output.csv
