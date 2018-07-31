@@ -9,7 +9,7 @@ plot_data4 = randn(36).cumsum()
 
 fig = plt.figure()
 ax1 = fig.add_subplot(1, 1, 1)
-ax1.plot(plot_data1, marker=r'o', color=u'blue', linestyle='-', label='LGE')
+ax1.plot(plot_data1, marker=r'o', color=u'blue', linestyle='-', label='LG')
 ax1.plot(plot_data2, marker=r'+', color=u'red', linestyle='--', label='Samsung E')
 ax1.plot(plot_data3, marker=r'*', color=u'green', linestyle='-.', label='KB')
 ax1.plot(plot_data4, marker=r's', color=u'orange', linestyle=':', label='Hyundai H')

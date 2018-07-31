@@ -7,9 +7,10 @@ import json
 
 import matplotlib.pyplot as plt
 import matplotlib
-from matplotlib import font_manager,rc
+from matplotlib import font_manager, rc
 
 access_key=""
+
 
 def get_request_url(url):
     req = urllib.request.Request(url)
@@ -24,24 +25,26 @@ def get_request_url(url):
         print("[%s] Error for URL:%s" % (datetime.datetime.now(), url))
         return None
 
+
 # [CODE 1]
 def getNatvisitor(yyyymm, nat_cd, ed_cd):
 
     end_point="http://openapi.tour.go.kr/openapi/service/EdrcntTourismStatsService/getEdrcntTourismStatsList"
 
     parameters = "?_type=json&serviceKey="+access_key
-    parameters+="%YM="+yyyymm
-    parameters+="NAT_CD="+nat_cd
-    parameters+="ED_CD="+ed_cd
+    parameters += "%YM="+yyyymm
+    parameters += "NAT_CD="+nat_cd
+    parameters += "ED_CD="+ed_cd
 
     url=end_point+parameters
 
     retData = get_request_url(url)
 
-    if(retData == None):
+    if (retData == None):
         return None
     else:
         return json.loads(retData)
+
 
 def main():
     jsonResult = []
@@ -82,7 +85,7 @@ def main():
         retJson = json.dumps(jsonResult, indent=4, sort_keys=True, ensure_ascii=False)
         outfile.write(retJson)
 
-    #[CODE 2]
+    # [CODE 2]
     font_location="c:/windows/fonts/malgun.ttf"
     font_name = font_manager.FontProperties(fname=font_location).get_name()
     matplotlib.rc('font', family=font_name)
@@ -93,6 +96,7 @@ def main():
     plt.ylabel('방문객수')
     plt.grid(True)
     plt.show()
+
 
 if __name__ == '__main__':
     main()
