@@ -18,7 +18,7 @@ api.add_resource(CreateUser2, '/user2')
 class Multi(Resource):
     def get(self, num):
         return {'result': num*10}
-
 api.add_resource(Multi, '/mulit/<int:num>')
+
 if __name__ == '__main__':
     app.run(host='192.168.0.8')
