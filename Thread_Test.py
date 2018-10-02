@@ -12,6 +12,7 @@ def update_scheduler():
         else:
             time.sleep(3)
             g_Balcony_Windows = not g_Balcony_Windows
+            print("1")
 
 t = threading.Thread(target=update_scheduler)
 t.daemon = True
